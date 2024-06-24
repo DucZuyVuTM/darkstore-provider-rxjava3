@@ -36,6 +36,10 @@ public class GoodsListService {
                 .orElseThrow(RecordNotFoundException::new);
     }
 
+    public Iterable<GoodsList> getAllGoodsListByDeliveryId(int deliveryId) {
+        return goodsListRepository.findAllByDeliveryId(deliveryId);
+    }
+
     private void saveGoodsList(GoodsListRequest goodsListRequest) {
         int goodId = goodsListRequest.goodId();
         int deliveryId = goodsListRequest.deliveryId();

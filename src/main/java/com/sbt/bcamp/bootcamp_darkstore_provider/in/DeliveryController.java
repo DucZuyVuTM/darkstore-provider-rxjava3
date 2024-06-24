@@ -1,6 +1,5 @@
 package com.sbt.bcamp.bootcamp_darkstore_provider.in;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sbt.bcamp.bootcamp_darkstore_provider.entities.Delivery;
 import com.sbt.bcamp.bootcamp_darkstore_provider.in.request_entities.DeliveryRequest;
 import com.sbt.bcamp.bootcamp_darkstore_provider.service.DeliveryService;
@@ -9,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 public class DeliveryController {
     @Autowired
@@ -38,6 +38,7 @@ public class DeliveryController {
 
     @DeleteMapping("/order/{id}")
     public ResponseEntity<Void> deleteDelivery(@PathVariable int id) {
+        service.deleteDelivery(id);
         return ResponseEntity.ok().build();
     }
 }

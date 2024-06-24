@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 public class GoodsListController {
     @Autowired
@@ -16,6 +17,11 @@ public class GoodsListController {
     @GetMapping("/goodslist")
     public ResponseEntity<Iterable<GoodsList>> getAllGoodsList() {
         return ResponseEntity.ok(service.getAllGoodsList());
+    }
+
+    @GetMapping("/goodslist/delivery/{id}")
+    public ResponseEntity<Iterable<GoodsList>> getAllGoodsListByDeliveryId(@PathVariable int id){
+        return ResponseEntity.ok(service.getAllGoodsListByDeliveryId(id));
     }
 
     @GetMapping("/goodslist/{goodId}/{deliveryId}")

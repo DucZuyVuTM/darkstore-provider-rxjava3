@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface GoodsListRepository extends CrudRepository<GoodsList,Integer> {
     Optional<GoodsList> findByGoodIdAndDeliveryId(Integer goodId, Integer deliveryId);
+    Iterable<GoodsList> findAllByDeliveryId(Integer deliveryId);
 }
