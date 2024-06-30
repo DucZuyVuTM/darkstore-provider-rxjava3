@@ -1,3 +1,3 @@
-# bootcamp_as_provider
+# bootcamp_darkstore_provider
 
 Учебный back-end проект "АС Поставщиков"
