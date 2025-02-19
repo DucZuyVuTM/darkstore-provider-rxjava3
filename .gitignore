@@ -6,3 +6,5 @@ src/main/resources/application.properties
 .gigaide
 # Artifacts generated during the project build
 target
+# IDEA-like IDE`s files
+*.iml
