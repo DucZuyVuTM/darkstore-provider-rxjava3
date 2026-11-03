@@ -14,29 +14,29 @@ public class DeliveryController {
     @Autowired
     private DeliveryService service;
 
-    @GetMapping("/order")
+    @GetMapping("/delivery")
     public ResponseEntity<Iterable<Delivery>> getAllDeliveries() {
         return ResponseEntity.ok(service.getAllDeliveries());
     }
 
-    @GetMapping("/order/{id}")
+    @GetMapping("/delivery/{id}")
     public ResponseEntity<Delivery> getDeliveryById(@PathVariable int id) {
         return ResponseEntity.ok(service.getDeliveryById(id));
     }
 
-    @PostMapping("/order")
+    @PostMapping("/delivery")
     public ResponseEntity<Void> createDelivery(@RequestBody DeliveryRequest delivery) {
         service.createDelivery(delivery);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PutMapping("/order")
+    @PutMapping("/delivery")
     public ResponseEntity<Void> updateDelivery(@RequestBody DeliveryRequest delivery) {
         service.updateDelivery(delivery);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @DeleteMapping("/order/{id}")
+    @DeleteMapping("/delivery/{id}")
     public ResponseEntity<Void> deleteDelivery(@PathVariable int id) {
         service.deleteDelivery(id);
         return ResponseEntity.ok().build();

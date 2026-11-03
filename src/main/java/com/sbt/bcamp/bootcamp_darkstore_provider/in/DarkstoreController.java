@@ -19,6 +19,11 @@ public class DarkstoreController {
         return ResponseEntity.ok(service.getAllDarkstores());
     }
 
+    @GetMapping("/darkstore/{id}")
+    public ResponseEntity<Darkstore> getDarkstoreById(@PathVariable int id) {
+        return ResponseEntity.ok(service.getDarkstoreById(id));
+    }
+
     @PostMapping("/darkstore")
     public ResponseEntity<Void> createDarkstore(@RequestBody DarkstoreRequest darkstoreRequest) {
         service.createDarkstore(darkstoreRequest);
