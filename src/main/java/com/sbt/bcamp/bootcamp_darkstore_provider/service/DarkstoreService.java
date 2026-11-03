@@ -1,7 +1,6 @@
 package com.sbt.bcamp.bootcamp_darkstore_provider.service;
 
 import com.sbt.bcamp.bootcamp_darkstore_provider.entities.Darkstore;
-import com.sbt.bcamp.bootcamp_darkstore_provider.exceptions.SQL.RecordAlreadyExistException;
 import com.sbt.bcamp.bootcamp_darkstore_provider.exceptions.SQL.RecordNotFoundException;
 import com.sbt.bcamp.bootcamp_darkstore_provider.in.request_entities.DarkstoreRequest;
 import com.sbt.bcamp.bootcamp_darkstore_provider.repository.DarkstoreRepository;
