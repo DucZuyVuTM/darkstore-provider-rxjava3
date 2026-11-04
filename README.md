@@ -18,3 +18,7 @@ Java 21, Spring Boot, Hibernate, Maven
 
 Компиляция: `mvn clean compile`
 Запуск: `mvn spring-boot:run`
+
+## Результат запуска
+
+![Result](images/rxjava3.png)
